@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ka">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Facebook - Log In</title>
+  </head>
+  <body class="login-page">
+    <div class="login-wrapper">
+      <!-- მარცხენა მხარე -->
+      <div class="login-left">
+        <div class="login-logo">facebook</div>
+        <h2 class="recent-title">Recent Logins</h2>
+        <p class="recent-subtitle">Click your picture or add an account.</p>
+
+        <div class="account-cards">
+          <div class="account-card" onclick="quickLogin('Bakar')">
+            <button
+              class="remove-btn"
+              onclick="
+                event.stopPropagation();
+                this.closest('.account-card').remove();
+              "
+            >
+              &times;
+            </button>
+            <div class="avatar-wrap">
+              <img src="photos/account.svg" alt="Bakar" />
+            </div>
+            <div class="card-name">Bakar</div>
+          </div>
+
+          <div class="add-account-card">
+            <div class="add-circle">+</div>
+            <div class="add-label">Add Account</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- მარჯვენა მხარე -->
+      <div class="login-card">
+        <input
+          type="text"
+          id="emailInput"
+          placeholder="Email or phone number"
+        />
+        <input type="password" id="passwordInput" placeholder="Password" />
+        <p class="error-msg" id="errorMsg">შეიყვანეთ email და პაროლი.</p>
+        <button class="btn-login" onclick="handleLogin()">Log In</button>
+        <a class="forgot-link" href="#">Forgot password?</a>
+        <hr class="login-divider" />
+        <button class="btn-create">Create new account</button>
+      </div>
+    </div>
+
+    <footer class="login-footer">
+      <p><a href="#">Create a Page</a> for a celebrity, brand or business.</p>
+    </footer>
+
+    <script src="login.js"></script>
+  </body>
+</html>
