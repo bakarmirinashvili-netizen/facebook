@@ -68,14 +68,14 @@ const displayDiv = document.getElementById("displayPost");
 
 //  ფუნქცია, რომელიც ინახავს ტექსტს
 saveBtn.addEventListener("click", function () {
-  const textToSave = inputField.value; // ვიღებთ ინპუტში ჩაწერილ ტექსტს
+  const textToSave = inputField.value; 
 
   if (textToSave.trim() !== "") {
     // ვინახავთ LocalStorage-ში "userPost" სახელით
     localStorage.setItem("userPost", textToSave);
 
     alert("პოსტი შენახულია!");
-    showSavedPost(); // გამოვაჩინოთ შენახული ტექსტი ეკრანზე
+    showSavedPost(); 
   } else {
     alert("გთხოვთ, ჩაწეროთ რამე.");
   }
@@ -90,7 +90,7 @@ function showSavedPost() {
   }
 }
 
-// გამოვიძახოთ ფუნქცია გვერდის ჩატვირთვისთანავე
+
 showSavedPost();
 
 /* registracia*/
